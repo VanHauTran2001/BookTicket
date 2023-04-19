@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="10sp"
+                android:padding="10dp"
+                android:background="@drawable/background_text_color"
+                android:text="130,000đ . Giường"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/baseline_circle_24"
+                    android:id="@+id/v_depart"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+                <View
+                    app:layout_constraintEnd_toEndOf="@+id/v_depart"
+                    app:layout_constraintStart_toStartOf="@+id/v_depart"
+                    app:layout_constraintTop_toBottomOf="@+id/v_depart"
+                    android:background="@drawable/baseline_circle_24"
+                    android:id="@+id/v_line_custom"
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"/>
+                <View
+                    app:layout_constraintEnd_toEndOf="@+id/v_line_custom"
+                    app:layout_constraintStart_toStartOf="@+id/v_line_custom"
+                    app:layout_constraintTop_toBottomOf="@+id/v_line_custom"
+                    android:background="@drawable/placeholder"
+                    android:id="@+id/v_destination"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_depart"
+                    android:text="Bến xe Miền Tây"
+                    app:layout_constraintTop_toTopOf="@+id/v_depart"
+                    android:layout_marginLeft="5dp"
+                    app:layout_constraintStart_toEndOf="@+id/v_depart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_path"
+                    android:text="Xe tuyến: 135km - 4 giờ"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_destination"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_depart"
+                    app:layout_constraintStart_toStartOf="@+id/tv_depart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_destination"
+                    android:text="Bến Xe Trà Vinh"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_depart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_option_number_seat"
+                    android:text="Chọn số ghế"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:src="@drawable/baseline_edit_24"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/iv_options"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+                <TextView
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/orange"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/iv_options"
+                    android:text="Chọn ghế"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_list_seats"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="A12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_point_car"
+                android:text="Vui lòng chọn điểm lên xe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:padding="10dp"
+                android:id="@+id/spinner_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Thông tin người mua vé"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:src="@drawable/baseline_edit_24"
+
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/iv_edit"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+                <TextView
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/orange"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/iv_edit"
+                    android:text="Hủy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <TextView
+                android:text="Họ và tên "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:paddingLeft="10dp"
+                android:background="@drawable/background_input"
+                android:layout_marginTop="10dp"
+                android:id="@+id/edt_name"
+                android:hint="Họ và tên"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:text="Số điện thoại "
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:paddingLeft="10dp"
+                android:background="@drawable/background_input"
+
+                android:hint="Số điện thoại"
+                android:layout_marginTop="10dp"
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:text="Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:paddingLeft="10dp"
+                android:background="@drawable/background_input"
+
+                android:hint="Nhập địa chỉ email"
+                android:layout_marginTop="10dp"
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="Tiếp tục"
+                android:background="@drawable/background_button"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>
